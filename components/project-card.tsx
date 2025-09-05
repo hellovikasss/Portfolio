@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 import RevealOnView from "@/components/reveal-on-view"
@@ -44,7 +44,12 @@ export default function ProjectCard({
       >
         <div className="relative overflow-hidden rounded-[1.35rem] bg-black lg:h-full">
           {/* Image */}
-          <div className={cn("relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:h-full", imageContainerClassName)}>
+          <div
+            className={cn(
+              "relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:h-full",
+              imageContainerClassName,
+            )}
+          >
             <Image
               src={imageSrc || "/placeholder.svg"}
               alt={title}
@@ -74,12 +79,12 @@ export default function ProjectCard({
           <div className="absolute inset-x-0 bottom-0 p-4 sm:p-5">
             <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div>
-                <h3 className="text-lg font-semibold sm:text-xl">{title}</h3>
-                <p className="text-sm text-white/70">{subtitle}</p>
+                <h3 className="font-semibold text-2xl">{title}</h3>
+                <p className="text-white/70 text-lg">{subtitle}</p>
               </div>
               <Link
                 href={href}
-                className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-2 text-sm font-medium backdrop-blur transition-colors hover:bg-white/20 self-start sm:self-auto"
+                className="inline-flex items-center gap-2 rounded-full bg-white text-black px-3 py-2 font-medium transition-colors hover:bg-white/90 self-start sm:self-auto text-xl"
                 aria-label={`Open case study: ${title}`}
               >
                 Case study

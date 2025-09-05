@@ -103,14 +103,26 @@ export default function Page() {
                 />
 
                 <p className="mt-4 max-w-[42ch] text-lg text-white/70">
-                  Brandon is a product designer based in New York. He helps early‑stage startups ship beautiful, usable software fast.
+                  Vikas is a product designer based in New York. He helps early‑stage startups ship beautiful, usable
+                  software fast.
                 </p>
 
                 {/* CTAs */}
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <Button asChild size="lg" className="rounded-full">
-                    <Link href="mailto:brandon@portfolio.dev">
+                    <Link href="mailto:vikas@portfolio.dev">
                       Hire me
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    size="lg"
+                    className="rounded-full border-white/20 text-white hover:bg-white/10 bg-transparent"
+                  >
+                    <Link href="/blog">
+                      Read Blog
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
